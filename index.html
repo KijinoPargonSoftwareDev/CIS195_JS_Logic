@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #movieList {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .movie {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        #message {
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 Movie Explorer</h1>
+        <p>Explore my movie collection!</p>
+    </header>
+
+
+    <!-- Movie Collection -->
+    <section>
+        <h2>My Movies</h2>
+
+        <div id="movieList">
+            <!-- JavaScript will put movies here -->
+        </div>
+    </section>
+
+
+    <!-- Search / Filter -->
+    <section>
+        <h2>Find a Movie</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter a movie title"
+        >
+
+        <button id="searchButton">Search</button>
+        <button id="showAllButton">Show All</button>
+
+        <br>
+
+        <label for="genreSelect">Choose a genre:</label>
+
+        <select id="genreSelect">
+            <option value="all">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Animation">Animation</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+        </select>
+
+        <button id="genreButton">Filter</button>
+    </section>
+
+
+    <!-- Add Movie -->
+    <section>
+        <h2>Add a Movie</h2>
+
+        <input
+            type="text"
+            id="titleInput"
+            placeholder="Movie title"
+        >
+
+        <input
+            type="text"
+            id="genreInput"
+            placeholder="Genre"
+        >
+
+        <input
+            type="number"
+            id="ratingInput"
+            placeholder="Rating"
+            min="1"
+            max="10"
+        >
+
+        <button id="addButton">Add Movie</button>
+    </section>
+
+
+    <!-- Array Controls -->
+    <section>
+        <h2>Collection Controls</h2>
+
+        <button id="firstButton">Remove First</button>
+        <button id="lastButton">Remove Last</button>
+        <button id="favoriteButton">Add Favorite to Beginning</button>
+        <button id="topThreeButton">Show Top 3</button>
+    </section>
+
+
+    <!-- Menu -->
+    <section>
+        <h2>Movie Menu</h2>
+
+        <button id="menuButton">Choose an Option</button>
+
+        <p>
+            Use this menu to demonstrate a
+            <strong>switch statement</strong>.
+        </p>
+    </section>
+
+
+    <!-- Messages -->
+    <section>
+        <h2>Status</h2>
+
+        <div id="message">
+            Welcome to the Movie Explorer!
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
