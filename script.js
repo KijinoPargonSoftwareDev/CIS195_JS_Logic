@@ -10,7 +10,3 @@
 
 
 // 3. Add the required buttons and interactions.
-
-
-
-// 4. Demonstrate the required JavaScript concepts.
